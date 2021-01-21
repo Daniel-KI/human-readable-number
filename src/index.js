@@ -29,7 +29,6 @@ module.exports = function toReadable(number) {
     [80, 'eighty'],
     [90, 'ninety'],
   ]);
-
   const LargeNumbers = new Map([
     [0, 'hundred'],
     [1, 'thousand'],
@@ -64,7 +63,6 @@ module.exports = function toReadable(number) {
       readableNumber += `${SmallNumbers.get(hundreds)} ${LargeNumbers.get(0)} ${SmallNumbers.get(dozens * 10 + ones)}`.trim();
       continue;
     }
-
     readableNumber += `${SmallNumbers.get(hundreds)} ${LargeNumbers.get(0)} ${SmallNumbers.get(dozens * 10)} ${SmallNumbers.get(ones)}`.trim();
     continue;
   }
